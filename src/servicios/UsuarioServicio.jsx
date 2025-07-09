@@ -6,15 +6,15 @@ import axios from "axios";
 class UsuarioServicio{
 
     registrarUsuario(persona){
-        return axios.post("http://localhost:8080/usuario/crear",persona)
+        return axios.post("https://el-noticioso-backend.onrender.com/usuario/crear",persona)
     }
 
     iniciarSesion(credenciales){
-        return axios.post("http://localhost:8080/usuario/sesion",credenciales)
+        return axios.post("https://el-noticioso-backend.onrender.com/usuario/sesion",credenciales)
     }
 
     buscarIdUsuario(correoElectronico,usuario){
-        return axios.get(`http://localhost:8080/usuario/buscar/${correoElectronico}`,
+        return axios.get(`https://el-noticioso-backend.onrender.com/usuario/buscar/${correoElectronico}`,
             {
                 auth : {
                     username : usuario.correoElectronico,
@@ -25,7 +25,7 @@ class UsuarioServicio{
     }
 
     listarUsuarios(usuario){
-        return axios.get(`http://localhost:8080/admin/usuario/listar`,
+        return axios.get(`https://el-noticioso-backend.onrender.com/admin/usuario/listar`,
             {
                 auth : {
                     username:usuario.correoElectronico,

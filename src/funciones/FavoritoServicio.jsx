@@ -9,7 +9,7 @@ class FavoritoServicio {
 
 
     agregarFavorito(favorito, usuario) {
-        return axios.put(`http://localhost:8080/favoritos/aniadir`, favorito,
+        return axios.put(`https://el-noticioso-backend.onrender.com/favoritos/aniadir`, favorito,
             {
                 auth: {
                     username: usuario.correoElectronico,
@@ -20,7 +20,7 @@ class FavoritoServicio {
     }
 
     eliminarFavorito(favorito, usuario) {
-        return axios.delete("http://localhost:8080/favoritos/eliminar", {
+        return axios.delete("https://el-noticioso-backend.onrender.com/favoritos/eliminar", {
             data: favorito,
             auth: {
                 username: usuario.correoElectronico,
@@ -30,7 +30,7 @@ class FavoritoServicio {
     }
 
     listarFavorito(idUsuario, usuario) {
-        return axios.get(`http://localhost:8080/favoritos/listar/${idUsuario}`,
+        return axios.get(`https://el-noticioso-backend.onrender.com/favoritos/listar/${idUsuario}`,
             {
                 auth: {
                     username: usuario.correoElectronico,

@@ -7,15 +7,15 @@ import axios from "axios";
 class NoticiasServicio{
 
     obtenerNoticiaInicio(){
-        return axios.get(`http://localhost:8080/noticia/inicio`)
+        return axios.get(`https://el-noticioso-backend.onrender.com/noticia/inicio`)
     }
 
     filtrarLocalia(localia){
-        return axios.get(`http://localhost:8080/noticia/filtrar/${localia}`)
+        return axios.get(`https://el-noticioso-backend.onrender.com/noticia/filtrar/${localia}`)
     }
     
     obtenerNoticias(usuario){
-        return axios.get(`http://localhost:8080/admin/noticia/listar`,{
+        return axios.get(`https://el-noticioso-backend.onrender.com/admin/noticia/listar`,{
             auth : {
                 username : usuario.correoElectronico,
                 password: usuario.contrasenia
@@ -24,7 +24,7 @@ class NoticiasServicio{
     }
     
     crearNoticia(noticia, usuario) {
-        return axios.post("http://localhost:8080/admin/noticia/crear", noticia, {
+        return axios.post("https://el-noticioso-backend.onrender.com/admin/noticia/crear", noticia, {
             auth: {
             username: usuario.correoElectronico,
             password: usuario.contrasenia
@@ -34,7 +34,7 @@ class NoticiasServicio{
 
 
     eliminarNoticia(idNoticia,usuario){
-        return axios.delete(`http://localhost:8080/admin/noticia/eliminar/${idNoticia}`,{
+        return axios.delete(`https://el-noticioso-backend.onrender.com/admin/noticia/eliminar/${idNoticia}`,{
             auth : {
                 username : usuario.correoElectronico,
                 password : usuario.contrasenia
@@ -43,7 +43,7 @@ class NoticiasServicio{
     }
 
     listarEtiquetas(usuario){
-        return axios.get(`http://localhost:8080/admin/noticia/listar/etiquetas`,{
+        return axios.get(`https://el-noticioso-backend.onrender.com/admin/noticia/listar/etiquetas`,{
             auth : {
                 username : usuario.correoElectronico,
                 password:usuario.contrasenia
