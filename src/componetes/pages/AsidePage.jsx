@@ -11,7 +11,7 @@ export function AsidePage({ className = "" }) {
     async function fetchNoticias() {
       try {
         const response = await axios.get(
-            "https://newsapi.org/v2/everything?q=es&language=es&apiKey=28113ad732ac4a18a60497ab2219225a"
+            "https://gnews.io/api/v4/search?q=example&apikey=3cdf15ab6072d7729664a79e25ed36ec"
         );
         setNoticiasAPI(response.data.articles);
       } catch (error) {
