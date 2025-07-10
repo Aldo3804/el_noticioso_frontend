@@ -13,7 +13,7 @@ export function AsidePage({ className = "" }) {
             params: {
               q: "noticias",
               lang: "es",
-              max: 10,
+              max: 3,
               apikey: "3cdf15ab6072d7729664a79e25ed36ec"
             }
           }
